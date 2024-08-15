@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 20px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for user details */
+.container {
+  /* max-width: 800px; */
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f8e40614; /* White background for container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+h1 {
+  text-align: center;
+  color: goldenrod;
+}
+
+h2 {
+  color: goldenrod;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+h3 {
+  color: #029413;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+caption {
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+th,
+td {
+  padding: 7px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+.info h3 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px;
+  color: rgb(3, 106, 251);
+  background-color: antiquewhite;
+}
+
+.th {
+  color: #0345d3db; /* Blue background for table headers */
+  /* color: white; */
+  width: 35%;
+}
+
+.td {
+  color: #8f02a8cd; /* Light background color for table cells */
+  width: 65%;
+}
+
+/* Styling for Image */
+img {
+  max-width: 240px;
+  height: auto;
+  box-shadow: 1px 3px 7px #121212;
+  /* border: 2px solid #ddd; */
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto;
+}
+
+table.formBackgroundOdd {
+  background-color: #fcc92278;
+}
+
+table.formBackgroundOdd th,
+table.formBackgroundOdd td {
+  /* border: 1px solid #b0bec5; */
+  padding: 12px;
+}
+
+table.formBackgroundEven {
+  background-color: #0dc9f868;
+}
+
+table.formBackgroundEven th,
+table.formBackgroundEven td {
+  /* border: 1px solid #b0bec5; */
+  padding: 12px;
+}

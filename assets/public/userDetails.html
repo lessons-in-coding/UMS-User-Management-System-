@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details</title>
+    <link rel="stylesheet" href="../css/userDetails.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>User's Details</h1>
+      <div id="userDetails" class="info">
+        <!-- User details will be injected here -->
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get user data from localStorage
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        // Display user data
+        if (user) {
+          const userDetails = document.getElementById("userDetails");
+          userDetails.innerHTML = `
+          <h3>${user.name}'s Image:</h3>
+          <img src="../images/${user.image}" alt="User Image">
+          <table class="formBackgroundOdd">
+            <h3>Personal Background:</h3>
+            <tr><td class="th">Name:</td><td class="td">${user.name}</td></tr>
+            <tr><td class="th">Date of Birth:</td><td class="td">${user.dob}</td></tr>
+            <tr><td class="th">Place of Birth:</td><td class="td">${user.birthPlace}</td></tr>
+            <tr><td class="th">ID (NRC):</td><td class="td">${user.id}</td></tr>
+            <tr><td class="th">Father's Name:</td><td class="td">${user.fatherName}</td></tr>
+            <tr><td class="th">Mother's Name:</td><td class="td">${user.motherName}</td></tr>
+          </table>
+
+          <h3>Educational Background:</h3>
+          <table class="formBackgroundEven">
+            <tr><td class="th">Highest Education:</td><td class="td">${user.highestEducation}</td></tr>
+            <tr><td class="th">Certifications:</td><td class="td">${user.certifications}</td></tr>
+            <tr><td class="th">Projects:</td><td class="td">${user.projects}</td></tr>
+            <tr><td class="th">Skills:</td><td class="td">${user.skills}</td></tr>
+          </table>
+
+          <h3>Places:</h3>
+          <table class="formBackgroundOdd">
+            <tr><td class="th">Previous Address:</td><td class="td">${user.previousPlaces}</td></tr>
+            <tr><td class="th">Arrival Date:</td><td class="td">${user.arrivalDate}</td></tr>
+            <tr><td class="th">Reason for Moving:</td><td class="td">${user.reason}</td></tr>
+          </table>
+
+          <h3>Position:</h3>
+          <table class="formBackgroundEven">
+            <tr><td class="th">Current Position:</td><td class="td">${user.currentPosition}</td></tr>
+            <tr><td class="th">Previous Positions:</td><td class="td">${user.previousPositions}</td></tr>
+          </table>
+
+          <h3>Ordination:</h3>
+          <table class="formBackgroundOdd">
+            <tr><td class="th">Higher Ordination Date:</td><td class="td">${user.higherOrdination}</td></tr>
+            <tr><td class="th">Novice Ordination Date:</td><td class="td">${user.noviceOrdination}</td></tr>
+            <tr><td class="th">Instructor Name:</td><td class="td">${user.instructorName}</td></tr>
+            <tr><td class="th">Supervisor Name:</td><td class="td">${user.supervisorName}</td></tr>
+            <tr><td class="th">Ordination Place:</td><td class="td">${user.ordinationPlace}</td></tr>
+            <tr><td class="th">Supported Monks:</td><td class="td">${user.supportedMonks}</td></tr>
+            <tr><td class="th">Time of Becoming Monkhood:</td><td class="td">${user.monkhoodTime}</td></tr>
+            <tr><td class="th">Supporter Names:</td><td class="td">${user.supporterNames}</td></tr>
+          </table>
+
+          <h3>Contact:</h3>
+          <table class="formBackgroundEven">
+            <tr><td class="th">Email:</td><td class="td">${user.email}</td></tr>
+            <tr><td class="th">Phone:</td><td class="td">${user.phone}</td></tr>
+            <tr><td class="th">GitHub:</td><td class="td">${user.github}</td></tr>
+          </table>
+
+          <h3>Memo:</h3>
+          <p>${user.memo}</p>
+      `;
+        } else {
+          document.getElementById("userDetails").innerHTML =
+            "<p>No user data found.</p>";
+        }
+      });
+    </script>
+  </body>
+</html>
